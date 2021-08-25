@@ -76,6 +76,7 @@ public class ContactsStepDefs {
         ContactsPage contactsPage = new ContactsPage();
         contactsPage.getContactEmail(email).click();
 
+
     }
 
     @Then("the information should be same with database")
@@ -92,7 +93,6 @@ public class ContactsStepDefs {
         System.out.println("actualPhone = " + actualPhone);
 
         //get information from database
-
         //we are getting only one row of result
         //query for retrieving firstname,lastname,email,phone
 
@@ -111,7 +111,7 @@ public class ContactsStepDefs {
         //get info and save in the map
         Map<String, Object> rowMap = DBUtils.getRowMap(query);
 
-        String expectedFullName = (String) rowMap.get("full_name");
+        String expectedFullName = (String) rowMap.get("full_name"); // Object casted to String
         String expectedPhone = (String) rowMap.get("phone");
         String expectedEmail = (String) rowMap.get("email");
 

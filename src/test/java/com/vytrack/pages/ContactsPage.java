@@ -13,6 +13,7 @@ public class ContactsPage extends BasePage {
 
     public WebElement getContactEmail(String email){
         String xpath = "//*[contains(text(), '"+email+"') and @data-column-label='Email']";
+//        String xpath = "//*[contains(text(), '"+email+"')]";
         return Driver.get().findElement(By.xpath(xpath));
     }
 
