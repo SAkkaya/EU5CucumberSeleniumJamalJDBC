@@ -92,7 +92,9 @@ public class ContactsStepDefs {
         System.out.println("actualEmail = " + actualEmail);
         System.out.println("actualPhone = " + actualPhone);
 
-        //get information from database
+        //get information from database  => hook un icine ekledik
+
+
         //we are getting only one row of result
         //query for retrieving firstname,lastname,email,phone
 
@@ -120,7 +122,7 @@ public class ContactsStepDefs {
         System.out.println("expectedEmail = " + expectedEmail);
 
 
-        //assertion, Compare UI against to DB
+        //assertion, Compare UI against to DB     expected from DB, actual from UI
         Assert.assertEquals(expectedFullName,actualFullName);
         Assert.assertEquals(expectedEmail,actualEmail);
         Assert.assertEquals(expectedPhone,actualPhone);
